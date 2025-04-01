@@ -22,7 +22,7 @@ export default function Landing() {
     <div className="landing">
 
       <div className="landing-image">
-        <Image imagePath={`../../public/landing-${imagePath}.svg`} alt="Landing-Image" className="landing__img" />
+        <Image imagePath={`/public/landing-${imagePath}.svg`} alt="Landing-Image" className="landing__img" />
       </div>
 
       <div className="landing-content">
