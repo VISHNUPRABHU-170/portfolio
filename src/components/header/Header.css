@@ -1,0 +1,14 @@
+.header {
+  position: sticky;
+  inset: 20px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.profile {
+  font-size: 24px;
+  font-weight: 600;
+}
+

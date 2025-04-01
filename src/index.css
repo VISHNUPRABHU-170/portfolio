@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 20px 70px 0px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

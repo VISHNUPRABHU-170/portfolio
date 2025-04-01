@@ -1,0 +1,30 @@
+.landing {
+  height: 100vh;
+  display: flex;
+}
+
+.landing-content, .landing-image {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.landing-image {
+  align-items: center;  
+}
+
+.landing__img {
+  width: 700px;
+  height: 600px;
+}
+
+.landing-text {
+  font-size: 48px;
+  letter-spacing: 10px;
+}
+
+.landing-title {
+  font-weight: 600;
+}
