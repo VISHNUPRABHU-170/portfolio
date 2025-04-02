@@ -11,7 +11,7 @@ export default function NavList() {
         <Link label="SKILLS" link="skills" className="nav-link" />
       </li>
       <li>
-        <Link label="PROJECTS" className="nav-link" />
+        <Link label="PROJECTS" link="projects" className="nav-link" />
       </li>
       <li>
         <Link label="ACHIEVEMENTS" className="nav-link" />

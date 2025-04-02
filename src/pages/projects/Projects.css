@@ -1,0 +1,101 @@
+.projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.projects h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Wrapper to contain the list and buttons */
+.projects__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Project List (Carousel) */
+.projects__list {
+  width: 80%;
+  display: flex;
+  gap: 60px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding: 20px 20px;
+}
+
+/* Ensure scrollbar is hidden (optional) */
+.projects__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Project Item (Card) */
+.projects__item {
+  min-width: 400px;
+  height: 450px;
+  border-radius: 10px;
+  flex: 0 0 auto;
+  background: #f8f9fa;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects__item:hover {
+  transform: scale(1.05);
+}
+
+/* Left and Right Buttons */
+.projects__btn {
+  background: #1B1F3B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.projects__btn__disable {
+  background: #F2F2F2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Disable Button Style */
+.projects__btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Project Logo */
+.project__logo {
+  height: 250px;
+  background: linear-gradient(135deg, #1B1F3B, #fff);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Project Content */
+.project__content {
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
