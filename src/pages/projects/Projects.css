@@ -8,7 +8,7 @@
 }
 
 .projects h1 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -29,7 +29,6 @@
   display: flex;
   gap: 60px;
   overflow-x: auto;
-  white-space: nowrap;
   scroll-behavior: smooth;
   padding: 20px 20px;
 }
@@ -41,7 +40,7 @@
 
 /* Project Item (Card) */
 .projects__item {
-  min-width: 400px;
+  width: 400px;
   height: 450px;
   border-radius: 10px;
   flex: 0 0 auto;
@@ -86,16 +85,31 @@
 /* Project Logo */
 .project__logo {
   height: 250px;
-  background: linear-gradient(135deg, #1B1F3B, #fff);
+  width: 400px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 /* Project Content */
 .project__content {
-  padding: 20px;
-  text-align: center;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
   font-size: 1rem;
-  font-weight: bold;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* justify-content: space-evenly; */
+}
+
+.project__title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.project__description {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
 }

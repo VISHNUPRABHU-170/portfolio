@@ -7,7 +7,7 @@ export default function Header() {
     <div className="header">
       <span className="profile">V.</span>
       <NavList />
-      <Button label="Hire Me" className="header" />
+      <Button label="Hire Me" variant="outlined" />
     </div>
   );
 }

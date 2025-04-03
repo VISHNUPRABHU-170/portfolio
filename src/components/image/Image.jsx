@@ -1,3 +1,5 @@
-export default function Image({imagePath, alt, className}) { 
+import './Image.css';
+
+export default function Image({ imagePath, alt, className }) { 
   return <img src={imagePath} alt={alt} className={className} />;
 }

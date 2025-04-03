@@ -1,20 +1,20 @@
-import Link from "../link/Link";
+import Button from "../button/Button";
 import "./NavList.css";
 
 export default function NavList() {
   return (
     <ul className="nav-list">
       <li>
-        <Link label="PORTFOLIO" link="" className="nav-link" />
+        <Button label="PORTFOLIO" link="" variant="text" />
       </li>
       <li>
-        <Link label="SKILLS" link="skills" className="nav-link" />
+        <Button label="SKILLS" link="skills" variant="text" />
       </li>
       <li>
-        <Link label="PROJECTS" link="projects" className="nav-link" />
+        <Button label="PROJECTS" link="projects" variant="text" />
       </li>
       <li>
-        <Link label="ACHIEVEMENTS" className="nav-link" />
+        <Button label="ACHIEVEMENTS" variant="text" />
       </li>
     </ul>
   );
