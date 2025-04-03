@@ -1,4 +1,7 @@
 import { useRef, useState, useEffect } from "react";
+import Image from "../../components/image/Image";
+import PartnerPortal from "/public/partner-portal.png";
+import Fixit from "/public/fixit.png";
 import "./Projects.css";
 
 export default function Projects() {
@@ -46,29 +49,47 @@ export default function Projects() {
         <div className="projects__list" ref={carouselRef} onScroll={updateScrollButtons}>
           <div className="projects__item">
             <div className="project__logo">
+              <Image imagePath={PartnerPortal} alt="Landing-Image" className="project__img" />
             </div>
-            <div className="project__content">Project 1</div>
+            <div className="project__content">
+              <span className="project__title">Partner Portal</span>
+              <span className="project__description">
+                A web application that allows partners to raise tickets, view their status, and communicate with the support team.
+              </span>
+            </div>
           </div>
           <div className="projects__item">
             <div className="project__logo">
+              <Image imagePath={Fixit} alt="Landing-Image" className="project__img" />
             </div>
-            <div className="project__content">Project 2</div>
+            <div className="project__content">
+              <span className="project__title">Fixit</span>
+              <span className="project__description">
+                A mobile application that allows users to book services like plumbing, electrical, and carpentry.
+              </span>
+            </div>
           </div>
           <div className="projects__item">
-            <div className="project__logo"></div>
-            <div className="project__content">Project 3</div>
+            <div className="project__logo">
+              <Image imagePath={Fixit} alt="Landing-Image" className="project__img" />
+            </div>
+            <div className="project__content">
+              <span className="project__title">Fixit</span>
+              <span className="project__description">
+                A mobile application that allows users to book services like plumbing, electrical, and carpentry.
+              </span>
+            </div>
           </div>
           <div className="projects__item">
-            <div className="project__logo"></div>
-            <div className="project__content">Project 4</div>
-          </div>
-          <div className="projects__item">
-            <div className="project__logo"></div>
-            <div className="project__content">Project 5</div>
-          </div>
-          <div className="projects__item">
-            <div className="project__logo"></div>
-            <div className="project__content">Project 6</div>
+            <div className="project__logo">
+              <Image imagePath={Fixit} alt="Landing-Image" className="project__img" />
+            </div>
+            <div className="project__content">
+              <span className="project__title">Fixit</span>
+              <span className="project__description">
+                A mobile application that allows users to book services like plumbing, electrical, and carpentry.
+              </span>
+            </div>
           </div>
         </div>
         <button onClick={handleNext} className={!canScrollRight ? "projects__btn__disable" : "projects__btn"}>

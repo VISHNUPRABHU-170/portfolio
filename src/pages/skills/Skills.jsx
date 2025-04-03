@@ -10,7 +10,7 @@ export default function Skills() {
         {skills.map((skill, index) => {
           return (
             <li key={index} className="skill-card">
-              <Image imagePath={skill.skillIcon} />
+              <Image imagePath={skill.skillIcon} className="skill__img" />
               <span>{skill.label}</span>
             </li>
           );
