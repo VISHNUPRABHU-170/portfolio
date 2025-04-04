@@ -1,7 +1,5 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "../../components/image/Image";
-import PartnerPortal from "/public/partner-portal.png";
-import Fixit from "/public/fixit.png";
 import "./Projects.css";
 
 export default function Projects() {
@@ -43,13 +41,11 @@ export default function Projects() {
     <div className="projects">
       <h1>Projects</h1>
       <div className="projects__wrapper">
-        <button onClick={handlePrev} className={!canScrollLeft ? "projects__btn__disable" : "projects__btn"}>
-          &lt;
-        </button>
+        <Image onClick={handlePrev} imagePath="https://img.icons8.com/?size=100&id=26146&format=png&color=000000" className="skill__img" />
         <div className="projects__list" ref={carouselRef} onScroll={updateScrollButtons}>
           <div className="projects__item">
             <div className="project__logo">
-              <Image imagePath={PartnerPortal} alt="Landing-Image" className="project__img" />
+              {/* <Image imagePath={PartnerPortal} alt="Landing-Image" className="project__img" /> */}
             </div>
             <div className="project__content">
               <span className="project__title">Partner Portal</span>
@@ -58,43 +54,8 @@ export default function Projects() {
               </span>
             </div>
           </div>
-          <div className="projects__item">
-            <div className="project__logo">
-              <Image imagePath={Fixit} alt="Landing-Image" className="project__img" />
-            </div>
-            <div className="project__content">
-              <span className="project__title">Fixit</span>
-              <span className="project__description">
-                A mobile application that allows users to book services like plumbing, electrical, and carpentry.
-              </span>
-            </div>
-          </div>
-          <div className="projects__item">
-            <div className="project__logo">
-              <Image imagePath={Fixit} alt="Landing-Image" className="project__img" />
-            </div>
-            <div className="project__content">
-              <span className="project__title">Fixit</span>
-              <span className="project__description">
-                A mobile application that allows users to book services like plumbing, electrical, and carpentry.
-              </span>
-            </div>
-          </div>
-          <div className="projects__item">
-            <div className="project__logo">
-              <Image imagePath={Fixit} alt="Landing-Image" className="project__img" />
-            </div>
-            <div className="project__content">
-              <span className="project__title">Fixit</span>
-              <span className="project__description">
-                A mobile application that allows users to book services like plumbing, electrical, and carpentry.
-              </span>
-            </div>
-          </div>
         </div>
-        <button onClick={handleNext} className={!canScrollRight ? "projects__btn__disable" : "projects__btn"}>
-          &gt;
-        </button>
+        <Image onClick={handleNext} imagePath="https://img.icons8.com/?size=100&id=26147&format=png&color=000000" className="skill__img" />
       </div>
     </div>
   );

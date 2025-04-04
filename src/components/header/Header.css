@@ -1,14 +1,18 @@
+@import '../../styles/colors.css';
+
 .header {
   position: sticky;
-  inset: 20px;
+  inset: 0px;
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-color: var(--secondary-color); /* Deep Charcoal */
 }
- 
+
 .profile {
+  color: var(--primary-color); /* Crisp White */
   font-size: 24px;
   font-weight: 600;
 }
-

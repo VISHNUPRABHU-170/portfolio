@@ -1,6 +1,10 @@
+@import "../../styles/colors.css"; /* Import the global color variables */
+
 .landing {
   height: 100vh;
   display: flex;
+  background-color: var(--background-color); /* Off-White */
+  color: #333333;
 }
 
 .landing-content, .landing-image {

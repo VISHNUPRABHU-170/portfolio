@@ -1,53 +1,8 @@
 .link {
   text-decoration: underline;
   position: relative;
-  color: black;
+  color: #555555;
   font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
 }
-
-/* .nav-link {
-  position: relative;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -8px;
-  left: 0;
-  background-color: #000;
-  transition: width 0.5s ease-in-out;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-} */
-
-/* .download-link {
-  position: relative;
-  z-index: 1;
-}
-
-.download-link::before {
-  content: "";
-  width: 108px;
-  height: 0px;
-  position: absolute;
-  bottom: 1px;
-  background-color: #000;
-  z-index: -1;
-  transition: height .7s;
-}
-
-.download-link:hover {
-  color: #fff;
-}
-
-.download-link:hover::before {
-  height: 25px;
-} */

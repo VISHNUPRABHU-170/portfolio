@@ -1,5 +1,8 @@
+@import "../../styles/colors.css"; /* Import the global color variables */
+
 .skills {
   height: 100vh;
+  background-color: var(--background-color); /* Off-White */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,31 +16,54 @@
   letter-spacing: 2px;
   font-weight: bold;
   text-decoration: underline;
+  color: var(--text-primary-color); /* Charcoal */
 }
 
 .skills-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 50px;
 }
 
 .skill-card {
-  border: 1px solid #F7F7F7;
   padding: 20px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background-color: #F7F7F7;
+  background-color: var(--card-background-color); /* Light Gray */
   border-radius: 10px;
   font-size: 1rem;
+  color: var(--text-primary-color); /* Charcoal */
+  transition: box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
 }
 
 .skill-card:hover {
-  border-color: #000;
+  background-color: var(--secondary-color); /* Soft Blue hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhances hover shadow */
+  color: var(--primary-color); /* Crisp White text on hover */
 }
 
 .skill__img {
   width: 70px;
   height: 70px;
 }
+
+.skill-card {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Start slightly below */
+  animation: fadeInUp 1s ease forwards; /* Animate in */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
