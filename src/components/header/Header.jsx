@@ -12,7 +12,7 @@ const Header = () => {
       inset="0"
       sx={{
         backgroundColor: "#04111E",
-        padding: "50px 100px",
+        padding: "50px 100px 0px 100px",
         boxShadow: "none",
       }}
     >
@@ -39,7 +39,10 @@ const Header = () => {
           >
             V
           </Avatar>
-          <Typography variant="h6" sx={{ fontWeight: "bold", color: "#4CA6FF" }}> Vishnuprabhu </Typography>
+          <Typography variant="h6" sx={{ fontWeight: "bold", color: "#4CA6FF" }}>
+            {" "}
+            Vishnuprabhu{" "}
+          </Typography>
         </Toolbar>
 
         <NavList />
