@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Box, Link, Grid } from "@mui/material";
 import { styled } from "@mui/system";
+import ProfileImage from "../../../public/landing-1.svg";
 
 const LandingPage = styled(Box)(() => ({
   display: "flex",
@@ -14,11 +15,11 @@ const LandingPage = styled(Box)(() => ({
 export default function Landing() {
   return (
     <LandingPage>
-      <Grid container spacing={15} columns={2}  alignItems="center">
+      <Grid container spacing={15} columns={2} alignItems="center">
         <Grid item xs={1} md={1}>
           <Box
             component="img"
-            src="../../../public/landing-1.svg"
+            src={ProfileImage}
             alt="Profile Picture"
             sx={{
               width: "100%",
@@ -37,7 +38,9 @@ export default function Landing() {
             I specialize in building modern, user-friendly web applications. With a keen eye for design and code, I craft solutions that
             stand out.
           </Typography>
-          <Link href="#" style={{cursor: "pointer"}}>View My Resume</Link>
+          <Link href="#" style={{ cursor: "pointer" }}>
+            View My Resume
+          </Link>
         </Grid>
       </Grid>
     </LandingPage>
