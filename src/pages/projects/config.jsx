@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio to showcase my skills and projects.",
-    stack: ["React", "Material-UI", "JSX"],
+    stack: ["React", "Material UI", "JSX"],
     image: "/partner-portal.png",
     githubLink: "https://github.com/your-repo",
     demoLink: "https://your-demo-link.com",
