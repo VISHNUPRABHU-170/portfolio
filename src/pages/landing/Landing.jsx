@@ -1,7 +1,11 @@
 import React from "react";
-import { Typography, Box, Link, Grid } from "@mui/material";
+import { Typography, Box, Link, Grid, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 import ProfileImage from "../../../public/landing-1.svg";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import MediumIcon from "@mui/icons-material/Description"; // You can customize this icon for Medium
 
 const LandingPage = styled(Box)(() => ({
   display: "flex",
@@ -38,7 +42,32 @@ export default function Landing() {
             I specialize in building modern, user-friendly web applications. With a keen eye for design and code, I craft solutions that
             stand out.
           </Typography>
-          <Link href="#" style={{ cursor: "pointer" }}>
+          <Box sx={{ display: "flex", gap: 2, alignItems: "center", marginTop: 2 }}>
+            <IconButton href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
+              <GitHubIcon />
+            </IconButton>
+            <IconButton
+              href="https://www.linkedin.com/in/your-linkedin-username"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: "#fff" }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton href="mailto:vishnurr1708@gmail.com" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
+              <EmailIcon />
+            </IconButton>
+            <IconButton href="https://medium.com/@your-medium-username" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
+              <MediumIcon />
+            </IconButton>
+          </Box>
+          <Link
+            href="#"
+            underline="hover"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ marginTop: "20px", display: "inline-block", color: "#4CA6FF" }}
+          >
             View My Resume
           </Link>
         </Grid>
