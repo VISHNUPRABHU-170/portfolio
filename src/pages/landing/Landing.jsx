@@ -1,36 +1,34 @@
-import { useState, useEffect } from "react";
-import Image from "../../components/image/Image";
-import Link from "../../components/link/Link";
-import LandingImage1 from "/public/landing-1.svg";
-import LandingImage2 from "/public/landing-2.svg";
-import LandingImage3 from "/public/landing-3.svg";
-import LandingImage4 from "/public/landing-4.svg";
-import "./Landing.css";
+import React from "react";
+import { Typography, Box, Link, Grid } from "@mui/material";
+import { styled } from "@mui/system";
+
+const LandingPage = styled(Box)(() => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "#04111E",
+  color: "#FFF",
+  padding: "150px",
+}));
 
 export default function Landing() {
-  const images = [LandingImage1, LandingImage2, LandingImage3, LandingImage4]; // Store references
-  const [imageIndex, setImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval); // Cleanup interval
-  }, [images.length]);
-
   return (
-    <div className="landing">
-      <div className="landing-image">
-        <Image imagePath={images[imageIndex]} alt="Landing-Image" className="landing__img" />
-      </div>
-
-      <div className="landing-content">
-        <span className="landing-text">Hello, I'm</span>
-        <span className="landing-text landing-title">Vishnuprabhu</span>
-        <span className="landing-text">Full Stack Developer</span>
-        <Link label="My Resume" />
-      </div>
-    </div>
+    <LandingPage>
+      <Grid container spacing={5} alignItems="center">
+        <Grid item>
+          <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: "bold" }}>
+            Hello, I'm <span style={{ color: "#4CA6FF" }}>Vishnuprabhu</span>
+          </Typography>
+          <Typography variant="h5" component="h2" sx={{ marginBottom: 3 }}>
+            Full Stack Developer | Passionate About Coding
+          </Typography>
+          <Typography sx={{ marginBottom: 2 }}>
+            I specialize in building modern, user-friendly web applications. With a keen eye for design and code, I craft solutions that
+            stand out.
+          </Typography>
+          <Link href="#" style={{cursor: "pointer"}}>View My Resume</Link>
+        </Grid>
+      </Grid>
+    </LandingPage>
   );
 }

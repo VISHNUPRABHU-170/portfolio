@@ -1,31 +1,35 @@
 import MatButton from "@mui/material/Button";
-import { Link } from "react-router-dom";
-import "./Button.css";
 
-export default function Button({ label, link, variant }) {
+export default function Button({ label, variant }) {
   if (variant === "outlined") {
     return (
-      <Link to={link} className="button-link">
-        <MatButton variant="outlined" color="primary">
-          {label}
-        </MatButton>
-      </Link>
+      <MatButton variant="outlined" color="primary">
+        {label}
+      </MatButton>
     );
   } else if (variant === "contained") {
     return (
-      <Link to={link} className="button-link">
-        <MatButton variant="contained" color="primary">
-          {label}
-        </MatButton>
-      </Link>
+      <MatButton
+        variant="contained"
+        color="primary"
+        sx={{
+          backgroundColor: "#4CA6FF",
+        }}
+      >
+        {label}
+      </MatButton>
     );
   } else if (variant === "text") {
     return (
-      <Link to={link} className="button-link">
-        <MatButton variant="text" color="primary">
-          {label}
-        </MatButton>
-      </Link>
+      <MatButton
+        variant="text"
+        color="primary"
+        sx={{
+          color: "#4CA6FF",
+        }}
+      >
+        {label}
+      </MatButton>
     );
   }
 }

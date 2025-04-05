@@ -2,10 +2,10 @@
   --primary-color: #FFFFFF; /* Crisp White */
   --secondary-color: #333333; /* Deep Charcoal */
   --accent-color: #AAAAAA; /* Cool Gray */
-  --background-color: #F9F9F9; /* Off-White */
+  --background-color: #04111E; /* Off-White */
   --card-background-color: #EDEDED; /* Light Gray */
   --border-color: #AAAAAA; /* Cool Gray */
-  --text-primary-color: #333333; /* Charcoal */
-  --text-secondary-color: #555555; /* Medium Gray */
+  --text-primary-color: #fff; /* Charcoal */
+  --text-secondary-color: #fff; /* Medium Gray */
   --highlight-color: #DDDDDD; /* Soft Blue */
 }
