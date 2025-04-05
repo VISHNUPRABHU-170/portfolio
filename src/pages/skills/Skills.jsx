@@ -18,7 +18,7 @@ const SkillCard = styled(Card)(() => ({
   width: "9.5rem",
   height: "9rem",
   backgroundColor: "#04111E",
-  boxShadow: "inset 0px 0px 10px rgba(255, 255, 255, 0.1)",
+  boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.1)",
   borderRadius: "10px",
   fontSize: "1rem",
   color: "#fff",
@@ -26,7 +26,6 @@ const SkillCard = styled(Card)(() => ({
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   "&:hover": {
     backgroundColor: "#4CA6FF",
-    boxShadow: "0px 4px 10px rgba(76, 166, 255, 0.7)",
     transform: "scale(1.05)",
   },
 }));

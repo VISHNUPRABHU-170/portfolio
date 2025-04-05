@@ -43,21 +43,16 @@ export default function Landing() {
             stand out.
           </Typography>
           <Box sx={{ display: "flex", gap: 2, alignItems: "center", marginTop: 2 }}>
-            <IconButton href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
+            <IconButton href="https://github.com/VISHNUPRABHU-170" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
               <GitHubIcon />
             </IconButton>
-            <IconButton
-              href="https://www.linkedin.com/in/your-linkedin-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: "#fff" }}
-            >
+            <IconButton href="https://www.linkedin.com/in/vishnuprabhur/" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
               <LinkedInIcon />
             </IconButton>
             <IconButton href="mailto:vishnurr1708@gmail.com" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
               <EmailIcon />
             </IconButton>
-            <IconButton href="https://medium.com/@your-medium-username" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
+            <IconButton href="https://medium.com/@vishnurr1708" target="_blank" rel="noopener noreferrer" sx={{ color: "#fff" }}>
               <MediumIcon />
             </IconButton>
           </Box>

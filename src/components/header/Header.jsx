@@ -23,7 +23,7 @@ const Header = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          boxShadow: "inset 0px 0px 10px rgba(255, 255, 255, 0.1)",
+          boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.1)",
           paddingLeft: "0px !important",
         }}
       >
