@@ -1,62 +1,82 @@
-import { useRef, useState, useEffect } from "react";
-import Image from "../../components/image/Image";
-import "./Projects.css";
+import React from "react";
+import { Box, Typography, Grid, Card, CardContent, Chip } from "@mui/material";
+import { styled } from "@mui/system";
+import Button from "../../components/button/Button";
+import projects from "./config.jsx";
+
+const ProjectPage = styled(Box)(() => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "100px",
+  backgroundColor: "#04111E",
+  color: "#FFF",
+  padding: "150px",
+}));
+
+const ProjectCard = styled(Card)(() => ({
+  width: "40rem",
+  padding: "10px",
+  backgroundColor: "#04111E",
+  boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.1)",
+  borderRadius: "10px",
+  textAlign: "left",
+  fontSize: "1rem",
+  color: "#fff",
+  overflow: "hidden",
+}));
 
 export default function Projects() {
-  const carouselRef = useRef(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  useEffect(() => {
-    updateScrollButtons();
-    window.addEventListener("resize", updateScrollButtons);
-    return () => window.removeEventListener("resize", updateScrollButtons);
-  }, []);
-
-  const updateScrollButtons = () => {
-    if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
-    }
-  };
-
-  const handleNext = () => {
-    if (carouselRef.current && canScrollRight) {
-      const scrollAmount = carouselRef.current.clientWidth * 0.35;
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      setTimeout(updateScrollButtons, 500);
-    }
-  };
-
-  const handlePrev = () => {
-    if (carouselRef.current && canScrollLeft) {
-      const scrollAmount = carouselRef.current.clientWidth * 0.35;
-      carouselRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      setTimeout(updateScrollButtons, 500);
-    }
-  };
-
   return (
-    <div className="projects">
-      <h1>Projects</h1>
-      <div className="projects__wrapper">
-        <Image onClick={handlePrev} imagePath="https://img.icons8.com/?size=100&id=26146&format=png&color=000000" className="skill__img" />
-        <div className="projects__list" ref={carouselRef} onScroll={updateScrollButtons}>
-          <div className="projects__item">
-            <div className="project__logo">
-              {/* <Image imagePath={PartnerPortal} alt="Landing-Image" className="project__img" /> */}
-            </div>
-            <div className="project__content">
-              <span className="project__title">Partner Portal</span>
-              <span className="project__description">
-                A web application that allows partners to raise tickets, view their status, and communicate with the support team.
-              </span>
-            </div>
-          </div>
-        </div>
-        <Image onClick={handleNext} imagePath="https://img.icons8.com/?size=100&id=26147&format=png&color=000000" className="skill__img" />
-      </div>
-    </div>
+    <ProjectPage>
+      <Typography
+        variant="h4"
+        component="h1"
+        sx={{
+          textTransform: "uppercase",
+          letterSpacing: "2px",
+          fontWeight: "bold",
+          textDecoration: "underline",
+        }}
+      >
+        Projects
+      </Typography>
+      <Grid container spacing={10} columns={2} sx={{ display: "flex", justifyContent: "center" }}>
+        {projects.map((project, index) => (
+          <Grid item xs={12} sm={6} md={1} key={index}>
+            <ProjectCard>
+              <CardContent sx={{ padding: "20px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <Typography variant="h5" sx={{ fontWeight: "bold", marginBottom: "10px" }}>
+                  {project.title}
+                </Typography>
+                <Typography sx={{ marginBottom: "15px" }}>{project.description}</Typography>
+                <Box sx={{ display: "flex", gap: "20px", flexWrap: "wrap", marginBottom: "15px" }}>
+                  {project.stack?.map((tech, i) => (
+                    <Chip
+                      key={i}
+                      label={tech}
+                      sx={{
+                        color: "#4CA6FF",
+                        fontWeight: "bold",
+                        "&:hover": {
+                          backgroundColor: "#3A94D9",
+                          color: "#fff",
+                          cursor: "pointer",
+                        },
+                      }}
+                    />
+                  ))}
+                </Box>
+                <Box sx={{ display: "flex", gap: "15px", marginTop: "20px" }}>
+                  <Button label="Code" variant="contained"></Button>
+                  <Button label="Demo" variant="contained"></Button>
+                </Box>
+              </CardContent>
+            </ProjectCard>
+          </Grid>
+        ))}
+      </Grid>
+    </ProjectPage>
   );
 }

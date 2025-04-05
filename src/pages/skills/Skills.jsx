@@ -25,7 +25,6 @@ const SkillCard = styled(Card)(() => ({
   textAlign: "center",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   "&:hover": {
-    backgroundColor: "#4CA6FF",
     transform: "scale(1.05)",
   },
 }));
