@@ -9,16 +9,14 @@ const Header = () => {
   return (
     <AppBar
       position="sticky"
-      inset="0"
       sx={{
         backgroundColor: "#04111E",
-        padding: "50px 100px 0px 100px",
         boxShadow: "none",
       }}
     >
       <Toolbar
         sx={{
-          backgroundColor: "#04111E",
+          margin: "50px 100px 0px 100px",
           borderRadius: "10px",
           display: "flex",
           justifyContent: "space-between",
@@ -33,15 +31,14 @@ const Header = () => {
               bgcolor: "#4CA6FF",
               color: "#fff",
               fontWeight: "bold",
-              width: 40,
-              height: 40,
+              width: 35,
+              height: 35,
             }}
           >
             V
           </Avatar>
           <Typography variant="h6" sx={{ fontWeight: "bold", color: "#4CA6FF" }}>
-            {" "}
-            Vishnuprabhu{" "}
+            Vishnuprabhu
           </Typography>
         </Toolbar>
 
