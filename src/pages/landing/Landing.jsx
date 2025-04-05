@@ -14,7 +14,18 @@ const LandingPage = styled(Box)(() => ({
 export default function Landing() {
   return (
     <LandingPage>
-      <Grid container spacing={5} alignItems="center">
+      <Grid container spacing={15} columns={2}  alignItems="center">
+        <Grid item xs={1} md={1}>
+          <Box
+            component="img"
+            src="../../../public/landing-1.svg"
+            alt="Profile Picture"
+            sx={{
+              width: "100%",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            }}
+          />
+        </Grid>
         <Grid item>
           <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: "bold" }}>
             Hello, I'm <span style={{ color: "#4CA6FF" }}>Vishnuprabhu</span>
