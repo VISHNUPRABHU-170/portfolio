@@ -7,7 +7,7 @@ const SkillsPage = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  gap: "40px",
+  gap: "100px",
   justifyContent: "center",
   backgroundColor: "#04111E",
   color: "#FFF",
@@ -17,16 +17,12 @@ const SkillsPage = styled(Box)(() => ({
 const SkillCard = styled(Card)(() => ({
   width: "9.5rem",
   height: "9rem",
-  backgroundColor: "#fff",
+  backgroundColor: "#04111E",
+  boxShadow: "inset 0px 0px 10px rgba(255, 255, 255, 0.1)",
   borderRadius: "10px",
   fontSize: "1rem",
-  color: "#04111E",
+  color: "#fff",
   textAlign: "center",
-  "&:hover": {
-    backgroundColor: "#4CA6FF",
-    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
-    color: "#fff",
-  },
 }));
 
 export default function Skills() {
@@ -44,7 +40,7 @@ export default function Skills() {
       >
         Tech Stack
       </Typography>
-      <Grid container spacing={{ xs: 2, md: 6 }} columns={{ xs: 1, sm: 1, md: 6 }}>
+      <Grid container spacing={{ xs: 2, md: 12 }} columns={{ xs: 1, sm: 1, md: 6 }}>
         {skills.map((skill, index) => (
           <Grid key={index} size={{ xs: 2, sm: 4, md: 1 }}>
             <SkillCard>
