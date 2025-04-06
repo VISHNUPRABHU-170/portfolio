@@ -1,16 +1,8 @@
-/* main>* {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease forwards;
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+  background-color: #04111E;
+  padding: 150px;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */

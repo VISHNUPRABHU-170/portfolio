@@ -11,7 +11,6 @@ const SkillsPage = styled(Box)(() => ({
   gap: "100px",
   backgroundColor: "#04111E",
   color: "#FFF",
-  padding: "150px",
 }));
 
 const SkillCard = styled(Card)(() => ({

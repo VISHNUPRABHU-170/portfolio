@@ -5,7 +5,7 @@ import ProfileImage from "../../../public/landing-1.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import MediumIcon from "@mui/icons-material/Description"; // You can customize this icon for Medium
+import MediumIcon from "@mui/icons-material/Description";
 
 const LandingPage = styled(Box)(() => ({
   display: "flex",
@@ -13,13 +13,12 @@ const LandingPage = styled(Box)(() => ({
   justifyContent: "center",
   backgroundColor: "#04111E",
   color: "#FFF",
-  padding: "150px",
 }));
 
 export default function Landing() {
   return (
     <LandingPage>
-      <Grid container spacing={15} columns={2} alignItems="center">
+      <Grid container spacing={15} columns={2} sx={{ display: "flex", justifyContent: "center" }}>
         <Grid item xs={1} md={1}>
           <Box
             component="img"
