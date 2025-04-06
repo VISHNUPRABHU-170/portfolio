@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, List, ListItem, Card, CardContent } from "@mui/material";
+import { Box, Typography, List, ListItem, Card, CardContent, Chip } from "@mui/material";
 import { styled } from "@mui/system";
 import { experience, experienceDetails } from "./config.jsx";
 
@@ -42,6 +42,7 @@ const ExperienceDetails = styled(Card)(() => ({
   boxSizing: "border-box",
   display: "flex",
   flexDirection: "column",
+  gap: "20px",
 }));
 
 const Header = styled(Typography)(() => ({
@@ -83,16 +84,8 @@ export default function Experience() {
             }}
           >
             {experience.map((project, index) => (
-              <ListItem
-                key={index}
-                onClick={() => setActiveExperienceCard(index)}
-                sx={{
-                  padding: 0,
-                  backgroundColor: activeExperienceCard == index ? "rgba(255, 255, 255, 0.1)" : "none",
-                  borderRadius: "10px",
-                }}
-              >
-                <ExperienceCard>
+              <ListItem key={index} onClick={() => setActiveExperienceCard(index)}>
+                <ExperienceCard sx={{ backgroundColor: activeExperienceCard === index && "#4CA6FF !important" }}>
                   <CardContent
                     sx={{
                       display: "flex",
@@ -113,9 +106,6 @@ export default function Experience() {
         </ListItem>
         <ListItem>
           <ExperienceDetails>
-            <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: "10px" }}>
-              Key Highlights
-            </Typography>
             <List
               sx={{
                 display: "flex",
@@ -124,10 +114,30 @@ export default function Experience() {
                 padding: 0,
               }}
             >
-              {experienceDetails[activeExperienceCard].map((detail, index) => (
+              <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: "10px" }}>
+                Key Highlights
+              </Typography>
+              {experienceDetails[activeExperienceCard]?.data?.map((detail, index) => (
                 <ListItem key={index}>{detail}</ListItem>
               ))}
             </List>
+            <Box sx={{ display: "flex", gap: "20px", flexWrap: "wrap", marginBottom: "15px" }}>
+              {experienceDetails[activeExperienceCard]?.stack?.map((tech, i) => (
+                <Chip
+                  key={i}
+                  label={tech}
+                  sx={{
+                    color: "#4CA6FF",
+                    fontWeight: "bold",
+                    "&:hover": {
+                      backgroundColor: "#3A94D9",
+                      color: "#fff",
+                      cursor: "pointer",
+                    },
+                  }}
+                />
+              ))}
+            </Box>
           </ExperienceDetails>
         </ListItem>
       </List>

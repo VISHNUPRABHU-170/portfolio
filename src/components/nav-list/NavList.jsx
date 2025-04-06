@@ -19,6 +19,9 @@ export default function NavList() {
           <Button label="SKILLS" link="skills" variant="text" />
         </ListItem>
         <ListItem>
+          <Button label="Experience" link="experience" variant="text" />
+        </ListItem>
+        <ListItem>
           <Button label="PROJECTS" link="projects" variant="text" />
         </ListItem>
         <ListItem>

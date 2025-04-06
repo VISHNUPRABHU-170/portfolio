@@ -56,7 +56,7 @@ export default function Landing() {
             </IconButton>
           </Box>
           <Link
-            href="#"
+            href="https://flowcv.com/resume/tmsg4on0k9"
             underline="hover"
             target="_blank"
             rel="noopener noreferrer"
