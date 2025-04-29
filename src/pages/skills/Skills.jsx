@@ -31,7 +31,7 @@ const SkillCard = styled(Card)(() => ({
 
 export default function Skills() {
   return (
-    <SkillsPage>
+    <SkillsPage id="skills">
       <Typography
         variant="h4"
         component="h1"

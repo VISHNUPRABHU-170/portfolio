@@ -17,7 +17,7 @@ const LandingPage = styled(Box)(() => ({
 
 export default function Landing() {
   return (
-    <LandingPage>
+    <LandingPage id="landing-page">
       <Grid container spacing={15} columns={2} sx={{ display: "flex", justifyContent: "center" }}>
         <Grid item xs={1} md={1}>
           <Box

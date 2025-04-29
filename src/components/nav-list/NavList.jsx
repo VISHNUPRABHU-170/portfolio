@@ -13,7 +13,7 @@ export default function NavList() {
         }}
       >
         <ListItem>
-          <Button label="ABOUT" link="" variant="text" />
+          <Button label="ABOUT" link="landing-page" variant="text" />
         </ListItem>
         <ListItem>
           <Button label="SKILLS" link="skills" variant="text" />
@@ -25,7 +25,7 @@ export default function NavList() {
           <Button label="PROJECTS" link="projects" variant="text" />
         </ListItem>
         <ListItem>
-          <Button label="ACHIEVEMENTS" variant="text" />
+          <Button label="ACHIEVEMENTS" link="achievements" variant="text" />
         </ListItem>
       </List>
       <Button label="Hire Me" variant="contained" />

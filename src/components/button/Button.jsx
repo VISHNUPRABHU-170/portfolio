@@ -1,9 +1,14 @@
 import MatButton from "@mui/material/Button";
 
-export default function Button({ label, variant }) {
+export default function Button({ label, link, variant }) {
+
+  const handleNavigation = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
   if (variant === "outlined") {
     return (
-      <MatButton variant="outlined" color="primary">
+      <MatButton variant="outlined" color="primary" onClick={() => handleNavigation(link)}>
         {label}
       </MatButton>
     );
@@ -15,6 +20,7 @@ export default function Button({ label, variant }) {
         sx={{
           backgroundColor: "#4CA6FF",
         }}
+        onClick={() => handleNavigation(link)}
       >
         {label}
       </MatButton>
@@ -27,6 +33,7 @@ export default function Button({ label, variant }) {
         sx={{
           color: "#4CA6FF",
         }}
+        onClick={() => handleNavigation(link)}
       >
         {label}
       </MatButton>

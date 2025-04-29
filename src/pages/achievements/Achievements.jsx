@@ -26,7 +26,7 @@ export default function Achievements() {
   const achievements = ["/javascript-basic.jpg", "/java-basic.jpg", "problem-solving.png", "/sql.png", "/java-udemy.png"];
 
   return (
-    <AchievementPage>
+    <AchievementPage id="achievements">
       <Typography
         variant="h4"
         component="h1"

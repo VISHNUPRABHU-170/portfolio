@@ -62,7 +62,7 @@ export default function Experience() {
   const [activeExperienceCard, setActiveExperienceCard] = React.useState(0);
 
   return (
-    <ExperiencePage>
+    <ExperiencePage id="experience">
       <Header variant="h4" component="h1">
         Experience
       </Header>

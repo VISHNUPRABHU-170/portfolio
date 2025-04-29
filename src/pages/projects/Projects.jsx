@@ -28,7 +28,7 @@ const ProjectCard = styled(Card)(() => ({
 
 export default function Projects() {
   return (
-    <ProjectPage>
+    <ProjectPage id="projects">
       <Typography
         variant="h4"
         component="h1"
